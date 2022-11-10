@@ -189,7 +189,7 @@ section {
 }
 
 #process li i {
-  color: grey;
+  color: #9356DC;
   font-size: 1.1em;
   margin-right: 5px;
 }
@@ -260,6 +260,7 @@ section {
   color: #078C6B;
   font-weight: bold;
   font-size: .9em;
+  border-radius: 50px;
 }
 
 .restaurant > img {
