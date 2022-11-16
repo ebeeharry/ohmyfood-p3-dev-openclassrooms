@@ -1,0 +1,343 @@
+html {
+  font-family: "Roboto";
+  min-width: 325px;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+body {
+  margin: 0;
+  color: black;
+}
+
+header {
+  position: relative;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#back {
+  position: absolute;
+  left: 20px;
+  top: 25px;
+  color: inherit;
+  font-size: 1.2em;
+}
+
+#logo {
+  height: 30px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+#photo {
+  height: 225px;
+}
+
+#menu {
+  padding: 10px 5%;
+  padding-bottom: 75px;
+  margin-top: -40px;
+  display: flex;
+  flex-direction: column;
+  background-color: #F6F6F6;
+  border-radius: 40px 40px 0 0;
+  z-index: 1;
+}
+
+.heart {
+  position: relative;
+  font-size: 25px;
+}
+
+.heart:hover .far.fa-heart {
+  transition-property: transform;
+  transition-duration: 200ms;
+  transition-delay: 300ms;
+  transform: scale(0);
+}
+
+.heart:hover .fa.fa-heart {
+  transform: scale(1)
+}
+
+.fa-heart {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.far.fa-heart {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: inherit;
+}
+
+.fa.fa-heart {
+  background: linear-gradient(to top right, #ED74DA, #9356DC);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition-property: transform;
+  transition-duration: 500ms;
+  transform: scale(0);
+}
+
+#menu-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 20px;
+}
+
+#menu-title > h1 {
+  font-family: "Shrikhand";
+  font-weight: normal;
+}
+
+#menu-title > i {
+  font-size: 1.5em;
+}
+
+#menu-list > div {
+  margin-bottom: 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#menu-list > div > p {
+  margin: 0;
+  margin-bottom: 5px;
+  align-self: flex-start;
+}
+
+.dash {
+  width: 40px;
+  height: 3px;
+  background-color: #99E2D0;
+  align-self: flex-start;
+}
+
+#menu-list > div {
+  height: 350px;
+  position: inherit;
+  top: 0;
+  overflow: hidden; 
+}
+
+.elem {
+  position: relative;
+  width: 330px;
+  height: 80px;
+  margin-top: 30px;
+  border-radius: 15px;
+  background-color: white;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  animation-name: display-elem;
+  animation-duration: 250ms;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+#starter div {
+  animation-delay: 500ms;
+}
+
+#main-course div {
+  animation-delay: 1000ms;
+}
+
+#dessert div {
+  animation-delay: 1500ms;
+}
+
+@keyframes display-elem {
+  from {
+    opacity: 0;
+    margin-top: 30px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 20px;
+  }
+}
+
+.elem-container {
+  width: 100%;
+  padding: 8px 15px;
+}
+
+.elem .elem-text {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.elem .elem-text > div:nth-child(1) {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content:  space-around;
+  transition-property: width;
+  transition-duration: 500ms;
+}
+
+.elem:hover .elem-text > div:nth-child(1) {
+  width: 220px;
+}
+
+.elem-name {
+  font-weight: bold;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.elem-desc {
+  font-size: .9em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.elem-price {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  font-weight: bold;
+  font-size: .9em;
+}
+
+.elem .elem-check {
+  width: 65px;
+  height: 100%;
+  margin-right: -65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  color: white;
+  font-size: 1.2em;
+  transition-property: margin;
+  transition-duration: 500ms;
+  float: right;
+}
+
+.elem:hover .elem-check {
+  margin-right: 0px;
+}
+
+.elem:hover .elem-check i {
+  animation: rotate-check 500ms forwards;
+}
+
+@keyframes rotate-check {
+  from {
+    transform: rotateZ(0deg)
+  }
+  to {
+    transform: rotateZ(360deg)
+  }
+}
+
+#order-btn {
+  height: 50px;
+  width: 225px;
+  border-radius: 25px;
+  border: none;
+  box-shadow: 1px 1px 5px grey;
+  background: linear-gradient(to bottom right, #ED74DA, #9356DC);
+  color: white;
+  font-size: 1rem;
+  align-self: center;
+}
+
+#order-btn:hover {
+  cursor: pointer;
+  filter: brightness(110%);
+  box-shadow: 3px 3px 5px grey;
+}
+
+footer {
+  height: 200px;
+  position: relative;
+  bottom: 0;
+  background-color: #353535;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+footer > div {
+  height: 180px;
+  padding-left: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+footer h3 {
+  margin: 0;
+  font-family: "Shrikhand";
+  font-weight: normal;
+}
+
+footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  line-height: 2;
+}
+
+li i {
+  width: 30px;
+}
+
+/* Tablette */
+@media screen and (min-width: 641px) {
+  html {
+    margin: 0 12.5%;
+    box-shadow: 0 0 30px #9356DC;
+  }
+
+  #menu-title {
+    justify-content: center;
+  }
+
+  #menu-title > h1 {
+    margin-right: 100px;
+  }
+
+  #menu-list > div > p, .dash {
+    align-self: center;
+  }
+}
